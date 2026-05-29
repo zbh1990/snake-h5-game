@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐍 Snake Game</h1>
+        </div>
+
+        <div class="info">
+            <div>
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+            <div>
+                <span>Level</span>
+                <strong id="level">1</strong>
+            </div>
+            <div>
+                <span>Best</span>
+                <strong id="highScore">0</strong>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls">
+            <p id="gameStatus">Use Arrow Keys, WASD or D-pad to move</p>
+            <div class="btn-group">
+                <button id="startBtn" class="btn btn-primary">Start</button>
+                <button id="pauseBtn" class="btn" disabled>Pause</button>
+                <button id="resetBtn" class="btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="dpad" id="dpad">
+            <div class="dpad-row">
+                <button class="dpad-btn" id="upBtn">▲</button>
+            </div>
+            <div class="dpad-row">
+                <button class="dpad-btn" id="leftBtn">◀</button>
+                <div class="dpad-center"></div>
+                <button class="dpad-btn" id="rightBtn">▶</button>
+            </div>
+            <div class="dpad-row">
+                <button class="dpad-btn" id="downBtn">▼</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <ul>
+                <li>方向键 / <strong>WASD</strong> / D-pad 控制移动，滑动触屏也可以</li>
+                <li>按 <strong>Space</strong> 暂停 / 继续</li>
+                <li>🍎 <strong>苹果</strong>：+10×等级 分数，蛇变长</li>
+                <li>🍒 <strong>樱桃</strong>：💥 扣 30 分 + 蛇变短 5 节</li>
+                <li>🍍 <strong>菠萝</strong>：蛇速变慢 5 秒</li>
+                <li>🍌 <strong>香蕉</strong>：极速加速 5 秒，+20 分</li>
+                <li>🍇 <strong>葡萄</strong>：蛇立刻变长 +5 节，+30 分</li>
+                <li>特殊水果每 5 秒出现，会自动消失，穿墙不死</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
